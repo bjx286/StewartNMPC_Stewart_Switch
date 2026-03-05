@@ -1,0 +1,894 @@
+Model {
+  Name			  "StewartPlatformEquilibrium"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  PreLoadFcn		  "StewartPlatformSetup"
+  Created		  "Wed Aug 28 15:36:46 2002"
+  Creator		  "jwendlan"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "jwendlan"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Aug 29 14:45:51 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:19>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "normal"
+  Solver		  "ode45"
+  SolverMode		  "Auto"
+  StartTime		  "0.0"
+  StopTime		  "0.005"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  on
+  BooleanDataType	  on
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  on
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      ShowAdditionalParam     off
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      From
+    }
+    Block {
+      BlockType		      Goto
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      PMComponent
+      SubClassName	      "unknown"
+      PortType		      "blob"
+    }
+    Block {
+      BlockType		      PMIOPort
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "StewartPlatformEquilibrium"
+    Location		    [232, 122, 991, 766]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    BlocksetDataString	    "[0 0 -9.81]|1|2|1e-3|1|1e-3|1|0|1e-4|1e-4|0|0|1|1"
+"e-5|Deprecated|0|0|0||1|0"
+    Block {
+      BlockType		      From
+      Name		      "From"
+      Position		      [135, 210, 155, 230]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "M"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From1"
+      Position		      [225, 210, 245, 230]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "M"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From10"
+      Position		      [435, 515, 455, 535]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "F5"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From11"
+      Position		      [465, 515, 485, 535]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "F6"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From2"
+      Position		      [315, 210, 335, 230]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "M"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From3"
+      Position		      [405, 210, 425, 230]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "M"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From4"
+      Position		      [495, 210, 515, 230]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "M"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From5"
+      Position		      [585, 210, 605, 230]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "M"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From6"
+      Position		      [315, 515, 335, 535]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "F1"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From7"
+      Position		      [345, 515, 365, 535]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "F2"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From8"
+      Position		      [375, 515, 395, 535]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "F3"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From9"
+      Position		      [405, 515, 425, 535]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "F4"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto"
+      Position		      [368, 90, 392, 115]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "M"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto10"
+      Position		      [495, 400, 515, 430]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "F5"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto11"
+      Position		      [585, 400, 605, 430]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "F6"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto6"
+      Position		      [225, 400, 245, 430]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "F2"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto7"
+      Position		      [135, 400, 155, 430]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "F1"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto8"
+      Position		      [315, 400, 335, 430]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "F3"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto9"
+      Position		      [405, 400, 425, 430]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      GotoTag		      "F4"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Ground1"
+      Tag		      "__orphan__"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [145, 445, 185, 485]
+      Orientation	      "up"
+      ShowName		      off
+      SourceBlock	      "mblibv1/Bodies/Ground"
+      SourceType	      "msb"
+      PortType		      "workingframe"
+      PhysicalDomain	      "Mechanical"
+      DialogClass	      "GroundBlock"
+      ClassName		      "Ground"
+      CoordPosition	      "pos_base(1,:)"
+      CoordPositionUnits      "m"
+      StateVectorMgrId	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Ground2"
+      Tag		      "__orphan__"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [235, 445, 275, 485]
+      Orientation	      "up"
+      ShowName		      off
+      SourceBlock	      "mblibv1/Bodies/Ground"
+      SourceType	      "msb"
+      PortType		      "workingframe"
+      PhysicalDomain	      "Mechanical"
+      DialogClass	      "GroundBlock"
+      ClassName		      "Ground"
+      CoordPosition	      "pos_base(2,:)"
+      CoordPositionUnits      "m"
+      StateVectorMgrId	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Ground3"
+      Tag		      "__orphan__"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [325, 445, 365, 485]
+      Orientation	      "up"
+      ShowName		      off
+      SourceBlock	      "mblibv1/Bodies/Ground"
+      SourceType	      "msb"
+      PortType		      "workingframe"
+      PhysicalDomain	      "Mechanical"
+      DialogClass	      "GroundBlock"
+      ClassName		      "Ground"
+      CoordPosition	      "pos_base(3,:)"
+      CoordPositionUnits      "m"
+      StateVectorMgrId	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Ground4"
+      Tag		      "__orphan__"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [415, 445, 455, 485]
+      Orientation	      "up"
+      ShowName		      off
+      SourceBlock	      "mblibv1/Bodies/Ground"
+      SourceType	      "msb"
+      PortType		      "workingframe"
+      PhysicalDomain	      "Mechanical"
+      DialogClass	      "GroundBlock"
+      ClassName		      "Ground"
+      CoordPosition	      "pos_base(4,:)"
+      CoordPositionUnits      "m"
+      StateVectorMgrId	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Ground5"
+      Tag		      "__orphan__"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [505, 445, 545, 485]
+      Orientation	      "up"
+      ShowName		      off
+      SourceBlock	      "mblibv1/Bodies/Ground"
+      SourceType	      "msb"
+      PortType		      "workingframe"
+      PhysicalDomain	      "Mechanical"
+      DialogClass	      "GroundBlock"
+      ClassName		      "Ground"
+      CoordPosition	      "pos_base(5,:)"
+      CoordPositionUnits      "m"
+      StateVectorMgrId	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Ground6"
+      Tag		      "__orphan__"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [595, 445, 635, 485]
+      Orientation	      "up"
+      ShowName		      off
+      SourceBlock	      "mblibv1/Bodies/Ground"
+      SourceType	      "msb"
+      PortType		      "workingframe"
+      PhysicalDomain	      "Mechanical"
+      DialogClass	      "GroundBlock"
+      ClassName		      "Ground"
+      CoordPosition	      "pos_base(6,:)"
+      CoordPositionUnits      "m"
+      StateVectorMgrId	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Leg\n1"
+      Ports		      [1, 1, 0, 0, 0, 1, 1]
+      Position		      [134, 245, 176, 380]
+      Orientation	      "down"
+      SourceBlock	      "StewartPlatformLegEquilibrium/Leg\nSubsystem"
+      SourceType	      ""
+      ln		      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Leg\n2"
+      Ports		      [1, 1, 0, 0, 0, 1, 1]
+      Position		      [224, 245, 266, 380]
+      Orientation	      "down"
+      SourceBlock	      "StewartPlatformLegEquilibrium/Leg\nSubsystem"
+      SourceType	      ""
+      ln		      "2"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Leg\n3"
+      Ports		      [1, 1, 0, 0, 0, 1, 1]
+      Position		      [314, 245, 356, 380]
+      Orientation	      "down"
+      SourceBlock	      "StewartPlatformLegEquilibrium/Leg\nSubsystem"
+      SourceType	      ""
+      ln		      "3"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Leg\n4"
+      Ports		      [1, 1, 0, 0, 0, 1, 1]
+      Position		      [404, 245, 446, 380]
+      Orientation	      "down"
+      SourceBlock	      "StewartPlatformLegEquilibrium/Leg\nSubsystem"
+      SourceType	      ""
+      ln		      "4"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Leg\n5"
+      Ports		      [1, 1, 0, 0, 0, 1, 1]
+      Position		      [494, 245, 536, 380]
+      Orientation	      "down"
+      SourceBlock	      "StewartPlatformLegEquilibrium/Leg\nSubsystem"
+      SourceType	      ""
+      ln		      "5"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Leg\n6"
+      Ports		      [1, 1, 0, 0, 0, 1, 1]
+      Position		      [584, 245, 626, 380]
+      Orientation	      "down"
+      SourceBlock	      "StewartPlatformLegEquilibrium/Leg\nSubsystem"
+      SourceType	      ""
+      ln		      "6"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Motion"
+      Position		      [365, 40, 395, 70]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      Value		      "zeros(1,3)"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [6, 1]
+      Position		      [302, 560, 498, 565]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Inputs		      "6"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [370, 580, 430, 610]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      VariableName	      "Forces"
+      MaxDataPoints	      "1"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Top\nPlate"
+      Ports		      [0, 0, 0, 0, 0, 0, 6]
+      Position		      [125, 140, 655, 195]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      SourceBlock	      "mblibv1/Bodies/Body"
+      SourceType	      "msb"
+      PhysicalDomain	      "mechanical"
+      SubClassName	      "Unknown"
+      PortType		      "workingframe"
+      RConnTagsString	      "CS1|CS2|CS3|CS4|CS5|CS6"
+      ClassName		      "Body"
+      DialogClass	      "MechanicalBodyBlock"
+      Mass		      "top_mass"
+      MassUnits		      "kg"
+      InertiaUnits	      "kg*m^2"
+      Inertia		      "top_inertia"
+      Shape		      "Cylinder"
+      ShapeDims		      "[1 1]"
+      ShapeUnits	      "m"
+      ShapeUse		      "false"
+      Density		      "1"
+      DensityUnits	      "kg/m^3"
+      DensityUse	      "false"
+      CG		      "Left$CG$[0 0 height]$WORLD$WORLD$m$[0 0 0]$Eule"
+"r X-Y-Z$deg$WORLD$false"
+      WorkingFrames	      "Right$CS1$pos_top(1,:)$WORLD$WORLD$m$[0 0 0]$Eu"
+"ler X-Y-Z$deg$WORLD$true#Right$CS2$pos_top(2,:)$WORLD$WORLD$m$[0 0 0]$Euler X"
+"-Y-Z$deg$WORLD$true#Right$CS3$pos_top(3,:)$WORLD$WORLD$m$[0 0 0]$Euler X-Y-Z$"
+"deg$WORLD$true#Right$CS4$pos_top(4,:)$WORLD$WORLD$m$[0 0 0]$Euler X-Y-Z$deg$W"
+"ORLD$true#Right$CS5$pos_top(5,:)$WORLD$WORLD$m$[0 0 0]$Euler X-Y-Z$deg$WORLD$"
+"true#Right$CS6$pos_top(6,:)$WORLD$WORLD$m$[0 0 0]$Euler X-Y-Z$deg$WORLD$true"
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Top\nPlate"
+      SrcPort		      RConn1
+      DstBlock		      "Leg\n1"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Ground6"
+      SrcPort		      RConn1
+      DstBlock		      "Leg\n6"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Ground5"
+      SrcPort		      RConn1
+      DstBlock		      "Leg\n5"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Ground4"
+      SrcPort		      RConn1
+      DstBlock		      "Leg\n4"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Ground3"
+      SrcPort		      RConn1
+      DstBlock		      "Leg\n3"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Ground2"
+      SrcPort		      RConn1
+      DstBlock		      "Leg\n2"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Ground1"
+      SrcPort		      RConn1
+      DstBlock		      "Leg\n1"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Leg\n2"
+      SrcPort		      LConn1
+      DstBlock		      "Top\nPlate"
+      DstPort		      RConn2
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Leg\n3"
+      SrcPort		      LConn1
+      DstBlock		      "Top\nPlate"
+      DstPort		      RConn3
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Leg\n4"
+      SrcPort		      LConn1
+      DstBlock		      "Top\nPlate"
+      DstPort		      RConn4
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Leg\n5"
+      SrcPort		      LConn1
+      DstBlock		      "Top\nPlate"
+      DstPort		      RConn5
+    }
+    Line {
+      LineType		      "Connection"
+      SrcBlock		      "Leg\n6"
+      SrcPort		      LConn1
+      DstBlock		      "Top\nPlate"
+      DstPort		      RConn6
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From"
+      SrcPort		      1
+      DstBlock		      "Leg\n1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Leg\n1"
+      SrcPort		      1
+      DstBlock		      "Goto7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From6"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From7"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From8"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "From9"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "From10"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "From11"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "From1"
+      SrcPort		      1
+      DstBlock		      "Leg\n2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Leg\n2"
+      SrcPort		      1
+      DstBlock		      "Goto6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From2"
+      SrcPort		      1
+      DstBlock		      "Leg\n3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Leg\n3"
+      SrcPort		      1
+      DstBlock		      "Goto8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From3"
+      SrcPort		      1
+      DstBlock		      "Leg\n4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Leg\n4"
+      SrcPort		      1
+      DstBlock		      "Goto9"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From4"
+      SrcPort		      1
+      DstBlock		      "Leg\n5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Leg\n5"
+      SrcPort		      1
+      DstBlock		      "Goto10"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From5"
+      SrcPort		      1
+      DstBlock		      "Leg\n6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Leg\n6"
+      SrcPort		      1
+      DstBlock		      "Goto11"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Motion"
+      SrcPort		      1
+      DstBlock		      "Goto"
+      DstPort		      1
+    }
+  }
+}

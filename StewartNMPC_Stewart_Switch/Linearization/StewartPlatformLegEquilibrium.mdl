@@ -1,0 +1,513 @@
+# $Revision: 1.4 $
+Library {
+  Name			  "StewartPlatformLegEquilibrium"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  LibraryLinkDisplay	  "none"
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	on
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Thu Jul 26 08:58:50 2001"
+  Creator		  "jwendlan"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "jwendlan"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Aug 29 09:51:35 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:26>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  SimulationMode	  "normal"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      PMIOPort
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "StewartPlatformLegEquilibrium"
+    Location		    [570, 90, 782, 364]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Leg\nSubsystem"
+      Ports		      [1, 1, 0, 0, 0, 1, 1]
+      Position		      [79, 65, 121, 200]
+      Orientation	      "down"
+      TreatAsAtomicUnit	      off
+      MaskPromptString	      "Leg Number"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "ln=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1"
+      System {
+	Name			"Leg\nSubsystem"
+	Location		[271, 109, 522, 781]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Motion"
+	  Description		  "Applies a force (N) to the prismatic axis"
+	  Position		  [195, 258, 225, 272]
+	  Orientation		  "left"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Joint Actuator"
+	  Tag			  "__orphan__"
+	  Ports			  [1, 0, 0, 0, 0, 0, 1]
+	  Position		  [130, 245, 170, 285]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "mblibv1/Sensors & \nActuators/Joint Actuato"
+"r"
+	  SourceType		  "msb"
+	  PortType		  "blob"
+	  PhysicalDomain	  "Mechanical"
+	  ActuationStyle	  "Motion"
+	  AngleUnits		  "deg"
+	  ArcVelocityUnits	  "deg/s"
+	  ArcAccelerationUnits	  "deg/s^2"
+	  CoordPositionUnits	  "m"
+	  VelocityUnits		  "m/s"
+	  AccelerationUnits	  "m/s^2"
+	  ForceUnits		  "N"
+	  TorqueUnits		  "N-m"
+	  ClassName		  "JointActuator"
+	  DialogClass		  "MechanicalActuatorBlock"
+	  Primitive		  "P1"
+	  ReferenceFrame	  "Absolute (INERTIAL)"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Joint Sensor"
+	  Tag			  "__orphan__"
+	  Ports			  [0, 1, 0, 0, 0, 1]
+	  Position		  [130, 325, 170, 365]
+	  SourceBlock		  "mblibv1/Sensors & \nActuators/Joint Sensor"
+	  SourceType		  "msb"
+	  PortType		  "blob"
+	  PhysicalDomain	  "Mechanical"
+	  Muxed			  "on"
+	  Pose			  "off"
+	  Angle			  "on"
+	  AngleUnits		  "deg"
+	  ArcVelocity		  "off"
+	  ArcVelocityUnits	  "deg/s"
+	  ArcAcceleration	  "off"
+	  ArcAccelerationUnits	  "deg/s^2"
+	  CoordPosition		  "off"
+	  CoordPositionUnits	  "m"
+	  Velocity		  "off"
+	  VelocityUnits		  "m/s"
+	  Acceleration		  "off"
+	  AccelerationUnits	  "m/s^2"
+	  Quaternion		  "on"
+	  QuaternionDT		  "off"
+	  QuaternionDDT		  "off"
+	  OutputVector		  "[ 1 ]"
+	  ClassName		  "JointSensor"
+	  DialogClass		  "MechanicalSensorBlock"
+	  Primitive		  "P1"
+	  Force			  "on"
+	  ForceUnits		  "N"
+	  Torque		  "off"
+	  TorqueUnits		  "N-m"
+	  ReferenceFrame	  "Absolute (INERTIAL)"
+	  ReactionSensedSide	  "Base"
+	  ReactionReferenceFrame  "Absolute (World)"
+	  ReactionForce		  "off"
+	  ReactionForceUnits	  "N"
+	  ReactionMoment	  "off"
+	  ReactionMomentUnits	  "N-m"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Leg\nCylindrical"
+	  Ports			  [0, 0, 0, 0, 0, 2, 2]
+	  Position		  [71, 280, 104, 330]
+	  Orientation		  "up"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "mblibv1/Joints/Custom Joint"
+	  SourceType		  "msb"
+	  PhysicalDomain	  "mechanical"
+	  SubClassName		  "custom_joint"
+	  PortType		  "blob"
+	  LConnTagsString	  "__newl0|SA1"
+	  RConnTagsString	  "__newr0|SA1"
+	  NumSAPorts		  "2"
+	  CutJoint		  "off"
+	  MarkAsCut		  "off"
+	  Primitives		  "revolute_prismatic"
+	  PrimitiveProps	  "R1$WORLD$cyl1(ln,:)$revolute#P1$WORLD$cyl1("
+"ln,:)$prismatic"
+	  ClassName		  "Joint"
+	  DialogClass		  "JointBlock"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Lower\nLeg"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [59, 370, 101, 460]
+	  Orientation		  "up"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "mblibv1/Bodies/Body"
+	  SourceType		  "msb"
+	  PhysicalDomain	  "mechanical"
+	  SubClassName		  "Unknown"
+	  PortType		  "workingframe"
+	  LConnTagsString	  "CS1"
+	  RConnTagsString	  "CS3"
+	  ClassName		  "Body"
+	  DialogClass		  "MechanicalBodyBlock"
+	  Mass			  "lower_leg_mass"
+	  MassUnits		  "kg"
+	  InertiaUnits		  "kg*m^2"
+	  Inertia		  "lower_leg_inertia"
+	  Shape			  "Cylinder"
+	  ShapeDims		  "[1 1]"
+	  ShapeUnits		  "m"
+	  ShapeUse		  "false"
+	  Density		  "1"
+	  DensityUnits		  "kg/m^3"
+	  DensityUse		  "false"
+	  CG			  "Left$CG$lower_leg(ln).origin$WORLD$WORLD$m$"
+"lower_leg(ln).rotation$3x3 Transform$deg$WORLD$false"
+	  WorkingFrames		  "Left$CS1$pos_base(ln,:)$WORLD$WORLD$m$lower"
+"_leg(ln).rotation$3x3 Transform$deg$WORLD$true#Right$CS3$(lower_leg(ln).end_p"
+"oint + upper_leg(ln).end_point)/2$WORLD$WORLD$m$lower_leg(ln).rotation$3x3 Tr"
+"ansform$deg$WORLD$true#Right$CS2$lower_leg(ln).end_point$WORLD$WORLD$m$lower_"
+"leg(ln).rotation$3x3 Transform$deg$WORLD$false"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Lower \nLeg\nUniversal"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [55, 485, 105, 535]
+	  Orientation		  "up"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "mblibv1/Joints/Universal"
+	  SourceType		  "msb"
+	  PhysicalDomain	  "mechanical"
+	  SubClassName		  "Unknown"
+	  PortType		  "blob"
+	  LConnTagsString	  "__newl0"
+	  RConnTagsString	  "__newr0"
+	  NumSAPorts		  "0"
+	  CutJoint		  "off"
+	  MarkAsCut		  "off"
+	  Primitives		  "revolute_revolute"
+	  PrimitiveProps	  "R1$WORLD$rev1(ln,:)$revolute#R2$WORLD$rev2("
+"ln,:)$revolute"
+	  ClassName		  "Joint"
+	  DialogClass		  "JointBlock"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Upper\nLeg"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [63, 155, 107, 245]
+	  Orientation		  "up"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "mblibv1/Bodies/Body"
+	  SourceType		  "msb"
+	  PhysicalDomain	  "mechanical"
+	  SubClassName		  "Unknown"
+	  PortType		  "workingframe"
+	  LConnTagsString	  "CS3"
+	  RConnTagsString	  "CS2"
+	  ClassName		  "Body"
+	  DialogClass		  "MechanicalBodyBlock"
+	  Mass			  "upper_leg_mass"
+	  MassUnits		  "kg"
+	  InertiaUnits		  "kg*m^2"
+	  Inertia		  "upper_leg_inertia"
+	  Shape			  "Cylinder"
+	  ShapeDims		  "[1 1]"
+	  ShapeUnits		  "m"
+	  ShapeUse		  "false"
+	  Density		  "1"
+	  DensityUnits		  "kg/m^3"
+	  DensityUse		  "false"
+	  CG			  "Left$CG$upper_leg(ln).origin$WORLD$WORLD$m$"
+"upper_leg(ln).rotation$3x3 Transform$deg$WORLD$false"
+	  WorkingFrames		  "Left$CS3$(lower_leg(ln).end_point + upper_l"
+"eg(ln).end_point)/2$WORLD$WORLD$m$upper_leg(ln).rotation$3x3 Transform$deg$WO"
+"RLD$true#Left$CS1$upper_leg(ln).end_point$WORLD$WORLD$m$upper_leg(ln).rotatio"
+"n$3x3 Transform$deg$WORLD$false#Right$CS2$pos_top(ln,:)$WORLD$WORLD$m$upper_l"
+"eg(ln).rotation$3x3 Transform$deg$WORLD$true"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Upper \nLeg\nUniversal"
+	  Ports			  [0, 0, 0, 0, 0, 1, 1]
+	  Position		  [69, 75, 101, 125]
+	  Orientation		  "up"
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "mblibv1/Joints/Universal"
+	  SourceType		  "msb"
+	  PhysicalDomain	  "mechanical"
+	  SubClassName		  "Unknown"
+	  PortType		  "blob"
+	  LConnTagsString	  "__newl0"
+	  RConnTagsString	  "__newr0"
+	  NumSAPorts		  "0"
+	  CutJoint		  "off"
+	  MarkAsCut		  "off"
+	  Primitives		  "revolute_revolute"
+	  PrimitiveProps	  "R1$WORLD$rev3(ln,:)$revolute#R2$WORLD$rev4("
+"ln,:)$revolute"
+	  ClassName		  "Joint"
+	  DialogClass		  "JointBlock"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "Top"
+	  Position		  [70, 35, 100, 50]
+	  Orientation		  "down"
+	  Port			  "1"
+	  Side			  "left"
+	}
+	Block {
+	  BlockType		  PMIOPort
+	  Name			  "Base"
+	  Position		  [65, 575, 95, 590]
+	  Orientation		  "up"
+	  Port			  "2"
+	  Side			  "right"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Force"
+	  Description		  "Senses position and velocity of the prismat"
+"ic axis"
+	  Position		  [195, 338, 225, 352]
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Lower \nLeg\nUniversal"
+	  SrcPort		  RConn1
+	  DstBlock		  "Lower\nLeg"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Upper\nLeg"
+	  SrcPort		  RConn1
+	  DstBlock		  "Upper \nLeg\nUniversal"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Top"
+	  SrcPort		  RConn1
+	  DstBlock		  "Upper \nLeg\nUniversal"
+	  DstPort		  RConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Base"
+	  SrcPort		  RConn1
+	  DstBlock		  "Lower \nLeg\nUniversal"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Joint Actuator"
+	  SrcPort		  RConn1
+	  DstBlock		  "Leg\nCylindrical"
+	  DstPort		  RConn2
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Joint Sensor"
+	  SrcPort		  LConn1
+	  DstBlock		  "Leg\nCylindrical"
+	  DstPort		  LConn2
+	}
+	Line {
+	  SrcBlock		  "Motion"
+	  SrcPort		  1
+	  DstBlock		  "Joint Actuator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Joint Sensor"
+	  SrcPort		  1
+	  DstBlock		  "Force"
+	  DstPort		  1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Lower\nLeg"
+	  SrcPort		  RConn1
+	  DstBlock		  "Leg\nCylindrical"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  SrcBlock		  "Upper\nLeg"
+	  SrcPort		  LConn1
+	  Points		  [0, 5]
+	  DstBlock		  "Leg\nCylindrical"
+	  DstPort		  RConn1
+	}
+      }
+    }
+  }
+}
